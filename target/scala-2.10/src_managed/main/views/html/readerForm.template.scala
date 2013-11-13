@@ -19,11 +19,11 @@ object readerForm extends BaseScalaTemplate[play.api.templates.HtmlFormat.Append
     def apply():play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
-Seq[Any](_display_(Seq[Any](/*2.2*/main("Welcome to Play 2.1")/*2.29*/ {_display_(Seq[Any](format.raw/*2.31*/("""
+Seq[Any](_display_(Seq[Any](/*2.2*/main("Welcome to Play 2.1 New")/*2.33*/ {_display_(Seq[Any](format.raw/*2.35*/("""
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reader123 </title> 
+    <title>Reader New</title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -50,17 +50,14 @@ Seq[Any](_display_(Seq[Any](/*2.2*/main("Welcome to Play 2.1")/*2.29*/ {_display
 
 <script type="text/javascript">
 $(document).ready(function() """),format.raw/*32.30*/("""{"""),format.raw/*32.31*/("""
-	/* var links = ["http://feed.feedsky.com/leica", "http://feeds.feedburner.com/RailsInside" ,"http://apple4.us/feed"];
-	for ( var int = 0; int < links.length; int++) """),format.raw/*34.48*/("""{"""),format.raw/*34.49*/("""
-		$('#rssList').append('<li><a onclick=\"parseRSS(\''+links[int]+'\');\">Link</a></li>');
-	"""),format.raw/*36.2*/("""}"""),format.raw/*36.3*/(""" */
+
 	var data =[
 			['0','4G spaces','4G spaces','http://blog.youxu.info/feed/','http://blog.youxu.info'],
 			['1','Ajaxian » Front Page','Ajaxian » Front Page','http://feeds.feedburner.com/ajaxian','http://ajaxian.com'],
 			['2','Android Developers Blog','Android Developers Blog','http://android-developers.blogspot.com/atom.xml','http://android-developers.blogspot.com/'],
 			['3','Apple4.us','Apple4.us','http://apple4.us/feed','http://apple4us.com'],
 			['4','Autoblog 简体中文版','Autoblog 简体中文版','http://cn.autoblog.com/rss.xml','http://cn.autoblog.com'],
-			['5','BlogJava-庄周梦蝶','BlogJava-庄周梦蝶','http://feed.feedsky.com/killme2008','http://www.blogjava.net/killme2008/'],
+			['5','BlogJava-庄周梦蝶','BlogJava-庄周梦蝶','http://www.blog.fnil.net/index.php/feed','http://www.blog.fnil.net/index.php/feed'],
 			['6','cnBeta.COM','cnBeta.COM','http://www.cnbeta.com/backend.php','http://www.cnbeta.com'],
 			['7','Community : All Content - jBPM','Community : All Content - jBPM','http://community.jboss.org/community/feeds/allcontent?community=2034','https://community.jboss.org/community/jbpm'],
 			['8','demo@virushuo','demo@virushuo','http://feeds2.feedburner.com/virushuo','http://blog.devep.net/virushuo/'],
@@ -119,133 +116,113 @@ $(document).ready(function() """),format.raw/*32.30*/("""{"""),format.raw/*32.31
 			['62','阮一峰的网络日志','阮一峰的网络日志','http://feeds.feedburner.com/ruanyifeng','http://www.ruanyifeng.com/blog/'],
 			['63','随便玩玩','随便玩玩','http://feed.feedsky.com/victorsos','http://www.zhengkun.org/blog'],
 			['64','韩寒','韩寒','http://blog.sina.com.cn/rss/1191258123.xml','http://blog.sina.com.cn/twocold'],
-			['65','java eye total','java eye total','null','null']
+			['65','JavaEye新闻','JavaEye新闻','http://www.javaeye.com/rss/news','http://www.iteye.com'],
+			['66','Scala fineqtbull','fineqtbull','http://fineqtbull.iteye.com/rss','http://www.iteye.com'],
+			['67','淘宝核心系统团队博客','淘宝核心系统团队博客','http://rdc.taobao.com/blog/cs/?feed=rss2', 'http://rdc.taobao.com/blog/cs/?feed=rss2'],
+			['68', 'UC技术博客','UC技术博客', 'http://tech.uc.cn/?feed=rss2','http://tech.uc.cn/?feed=rss2'],
+			['69', '结构之法 算法之道','结构之法 算法之道','feed://blog.csdn.net/v_july_v/rss/list','feed://blog.csdn.net/v_july_v/rss/list']
+			
 	];
-	for ( var int = 0; int < data.length; int++) """),format.raw/*104.47*/("""{"""),format.raw/*104.48*/("""
+	for ( var int = 0; int < data.length; int++) """),format.raw/*106.47*/("""{"""),format.raw/*106.48*/("""
 		var record = data[int];
-		$('#rssList').append('<li><a href="#" onclick=\"parseRSS(\''+ record[3]+ '\');\">' + record[1] +'</a></li>');
-	"""),format.raw/*107.2*/("""}"""),format.raw/*107.3*/("""
-	
-	/*  $.ajax("""),format.raw/*109.13*/("""{"""),format.raw/*109.14*/("""
+		$('#rssList').append('<li class="list-group-item"><span class="badge">14</span><a href="#" onclick=\"parseRSS(\''+ record[3]+ '\');\">' + record[1] +'</a></li>');
+		
+		
+	"""),format.raw/*111.2*/("""}"""),format.raw/*111.3*/("""
+	debugger;
+	/*  $.ajax("""),format.raw/*113.13*/("""{"""),format.raw/*113.14*/("""
 		    url: '/RSS/app/ajax/list/getSubscriptions',
 		    dataType: 'json',
-		    success: function(data) """),format.raw/*112.31*/("""{"""),format.raw/*112.32*/("""
-		    		for(p in data) """),format.raw/*113.24*/("""{"""),format.raw/*113.25*/("""
+		    success: function(data) """),format.raw/*116.31*/("""{"""),format.raw/*116.32*/("""
+		    		for(p in data) """),format.raw/*117.24*/("""{"""),format.raw/*117.25*/("""
 		    			$('#rssList').append('<li><a onclick=\"parseRSS(\''+ data[p]+ '\');\">' + p +'</a></li>');
-		    		"""),format.raw/*115.9*/("""}"""),format.raw/*115.10*/("""
-		    """),format.raw/*116.7*/("""}"""),format.raw/*116.8*/("""
-	 """),format.raw/*117.3*/("""}"""),format.raw/*117.4*/(""");  */
+		    		"""),format.raw/*119.9*/("""}"""),format.raw/*119.10*/("""
+		    """),format.raw/*120.7*/("""}"""),format.raw/*120.8*/("""
+	 """),format.raw/*121.3*/("""}"""),format.raw/*121.4*/(""");  */
 	
 	
-	// var dataBase = openDatabase("RSS", "1.0", "Rss table", 1024 * 1024, function () """),format.raw/*120.85*/("""{"""),format.raw/*120.86*/(""" """),format.raw/*120.87*/("""}"""),format.raw/*120.88*/(""");
-	// 	if (!dataBase) """),format.raw/*121.21*/("""{"""),format.raw/*121.22*/("""
+	// var dataBase = openDatabase("RSS", "1.0", "Rss table", 1024 * 1024, function () """),format.raw/*124.85*/("""{"""),format.raw/*124.86*/(""" """),format.raw/*124.87*/("""}"""),format.raw/*124.88*/(""");
+	// 	if (!dataBase) """),format.raw/*125.21*/("""{"""),format.raw/*125.22*/("""
 	// 		alert("数据库创建失败！");
-	// 	"""),format.raw/*123.6*/("""}"""),format.raw/*123.7*/(""" else """),format.raw/*123.13*/("""{"""),format.raw/*123.14*/("""
+	// 	"""),format.raw/*127.6*/("""}"""),format.raw/*127.7*/(""" else """),format.raw/*127.13*/("""{"""),format.raw/*127.14*/("""
 	// 		alert("数据库创建成功！");
-	// 	"""),format.raw/*125.6*/("""}"""),format.raw/*125.7*/(""" 
+	// 	"""),format.raw/*129.6*/("""}"""),format.raw/*129.7*/(""" 
 	// 	
-	// 	createTable=function() """),format.raw/*127.29*/("""{"""),format.raw/*127.30*/("""
-	// 		dataBase.transaction( function(tx) """),format.raw/*128.42*/("""{"""),format.raw/*128.43*/(""" 
+	// 	createTable=function() """),format.raw/*131.29*/("""{"""),format.raw/*131.30*/("""
+	// 		dataBase.transaction( function(tx) """),format.raw/*132.42*/("""{"""),format.raw/*132.43*/(""" 
 	// 			tx.executeSql("create table if not exists address (id REAL UNIQUE, title TEXT, name TEXT, xmlUrl TEXT, htmlUrl TEXT, userId TEXT)", 
 	// 						[], 
-	// 						function(tx,result)"""),format.raw/*131.30*/("""{"""),format.raw/*131.31*/(""" alert('创建address表成功'); """),format.raw/*131.55*/("""}"""),format.raw/*131.56*/(""", 
-	// 						function(tx, error)"""),format.raw/*132.30*/("""{"""),format.raw/*132.31*/(""" alert('创建address表失败:' + error.message); 
-	// 			"""),format.raw/*133.8*/("""}"""),format.raw/*133.9*/(""");
-	// 		"""),format.raw/*134.7*/("""}"""),format.raw/*134.8*/(""");
-	// 	"""),format.raw/*135.6*/("""}"""),format.raw/*135.7*/("""; 
+	// 						function(tx,result)"""),format.raw/*135.30*/("""{"""),format.raw/*135.31*/(""" alert('创建address表成功'); """),format.raw/*135.55*/("""}"""),format.raw/*135.56*/(""", 
+	// 						function(tx, error)"""),format.raw/*136.30*/("""{"""),format.raw/*136.31*/(""" alert('创建address表失败:' + error.message); 
+	// 			"""),format.raw/*137.8*/("""}"""),format.raw/*137.9*/(""");
+	// 		"""),format.raw/*138.7*/("""}"""),format.raw/*138.8*/(""");
+	// 	"""),format.raw/*139.6*/("""}"""),format.raw/*139.7*/("""; 
 	// 	createTable();
 	// 	
-	// 	insert = function () """),format.raw/*138.27*/("""{"""),format.raw/*138.28*/("""
-	// 		dataBase.transaction(function (tx) """),format.raw/*139.42*/("""{"""),format.raw/*139.43*/("""
+	// 	insert = function () """),format.raw/*142.27*/("""{"""),format.raw/*142.28*/("""
+	// 		dataBase.transaction(function (tx) """),format.raw/*143.42*/("""{"""),format.raw/*143.43*/("""
 	// 		tx.executeSql(
 	// 		"insert into stu (id, title, name, xmlUrl, htmlUrl, userId) values(?, ?, ?, ?, ?)",
 	// 		['02', 'abc'],
-	// 			function () """),format.raw/*143.20*/("""{"""),format.raw/*143.21*/(""" alert('添加数据成功'); """),format.raw/*143.39*/("""}"""),format.raw/*143.40*/(""",
-	// 			function (tx, error) """),format.raw/*144.29*/("""{"""),format.raw/*144.30*/(""" alert('添加数据失败: ' + error.message); 
-	// 			"""),format.raw/*145.8*/("""}"""),format.raw/*145.9*/(""" );
-	// 		"""),format.raw/*146.7*/("""}"""),format.raw/*146.8*/(""");
-	// 	"""),format.raw/*147.6*/("""}"""),format.raw/*147.7*/(""";
+	// 			function () """),format.raw/*147.20*/("""{"""),format.raw/*147.21*/(""" alert('添加数据成功'); """),format.raw/*147.39*/("""}"""),format.raw/*147.40*/(""",
+	// 			function (tx, error) """),format.raw/*148.29*/("""{"""),format.raw/*148.30*/(""" alert('添加数据失败: ' + error.message); 
+	// 			"""),format.raw/*149.8*/("""}"""),format.raw/*149.9*/(""" );
+	// 		"""),format.raw/*150.7*/("""}"""),format.raw/*150.8*/(""");
+	// 	"""),format.raw/*151.6*/("""}"""),format.raw/*151.7*/(""";
 	// 	insert(); 
-"""),format.raw/*149.1*/("""}"""),format.raw/*149.2*/(""");
-function createCollapseStyle(e, i) """),format.raw/*150.36*/("""{"""),format.raw/*150.37*/("""
+"""),format.raw/*153.1*/("""}"""),format.raw/*153.2*/(""");
+function createCollapseStyle(e, i) """),format.raw/*154.36*/("""{"""),format.raw/*154.37*/("""
 	
-	var content = '<div class="accordion-group">';
-		content += ' <div class="accordion-heading">';
-			content += ' <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#' + i + '">';
-			if( i % 2 == 0)	 """),format.raw/*155.21*/("""{"""),format.raw/*155.22*/("""
-				content += '<p class="muted">' + e.title + '</p>';
-			"""),format.raw/*157.4*/("""}"""),format.raw/*157.5*/(""" else """),format.raw/*157.11*/("""{"""),format.raw/*157.12*/("""
-				content += e.title;
-			"""),format.raw/*159.4*/("""}"""),format.raw/*159.5*/("""
-			
-			content += '</a>';
-		content += '</div>';
-		content += '<div id="' + i + '" class="accordion-body collapse">';
-			content += '<div class="accordion-inner">';
-				content += "<div class='contentId'><div class='hero-unit'><a target='_blank' href='" + e.link + "'>" + e.title +"</a>" + "<p>" + e.author + "</p>" + e.content + "</div></div>";
-			content += "</div>";
-		content += "</div>";
-		content += "</div>";
-		
+		var content = '<div class="panel-group" id="accordion">';
+				content += 	'<div class="panel panel-default">';
+				content += 		'<div class="panel-heading">';
+				content +=			'<h4 class="panel-title">';
+				content +=				'<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#' + i + '">';
+				content +=				 e.title;
+				content +=				'</a>';
+				content +=			'</h4>';
+				content +=		'</div>';
+				content +=	'<div id="' + i + '" class="panel-collapse collapse">';
+				content +=		'<div class="panel-body">';
+				
+				content +=			'<h4><a target="_blank" href="' + e.link + '">' + e.title +'</a></h4><p>' + e.author + '</p>' + e.content;
+				content +=		'</div>';
+				content +=	'</div>';
+				content +=	'</div>';
+				content +=	'</div>';
+
 		return content;
-"""),format.raw/*171.1*/("""}"""),format.raw/*171.2*/("""
-function parseRSS(url, callback) """),format.raw/*172.34*/("""{"""),format.raw/*172.35*/("""
-	   $.ajax("""),format.raw/*173.12*/("""{"""),format.raw/*173.13*/("""
+"""),format.raw/*175.1*/("""}"""),format.raw/*175.2*/("""
+function parseRSS(url, callback) """),format.raw/*176.34*/("""{"""),format.raw/*176.35*/("""
+	   $.ajax("""),format.raw/*177.12*/("""{"""),format.raw/*177.13*/("""
 	    url: 'http://ajax.googleapis.com/ajax/services/feed/load?q=' + encodeURIComponent(url) + '&v=1.0&num=50&callback=?',
 	    dataType: 'json',
-	    success: function(data) """),format.raw/*176.30*/("""{"""),format.raw/*176.31*/("""
-	    	 	var el = document.getElementById('contentId');
-	    	 	if(el) """),format.raw/*178.16*/("""{"""),format.raw/*178.17*/("""
-	    	 		$('.contentId').remove();
-	    	 	"""),format.raw/*180.9*/("""}"""),format.raw/*180.10*/("""
-	    		var rows = '<div class="accordion" id="accordion2">';
-	    		if (data.responseData.feed && data.responseData.feed.entries) """),format.raw/*182.70*/("""{"""),format.raw/*182.71*/("""
-	    			$.each(data.responseData.feed.entries, function (i, e) """),format.raw/*183.64*/("""{"""),format.raw/*183.65*/("""
+	    success: function(data) """),format.raw/*180.30*/("""{"""),format.raw/*180.31*/("""
+	    	 	if(	$('#majorLayout')) """),format.raw/*181.32*/("""{"""),format.raw/*181.33*/("""
+	    	 		$('#majorLayout').empty();
+	    	 	"""),format.raw/*183.9*/("""}"""),format.raw/*183.10*/("""
+	    		var rows = '';
+	    		if (data.responseData.feed && data.responseData.feed.entries) """),format.raw/*185.70*/("""{"""),format.raw/*185.71*/("""
+	    			$.each(data.responseData.feed.entries, function (i, e) """),format.raw/*186.64*/("""{"""),format.raw/*186.65*/("""
 	    				rows += createCollapseStyle(e, i);
-	    	      	"""),format.raw/*185.14*/("""}"""),format.raw/*185.15*/("""); 
-	    			rows += '</div>';
-	    	    """),format.raw/*187.11*/("""}"""),format.raw/*187.12*/("""
-	    		rows = "<div class='contentId'>" + rows + "</div>";
-	    		 $('#span10').append(rows);
-	    """),format.raw/*190.6*/("""}"""),format.raw/*190.7*/("""
-	  """),format.raw/*191.4*/("""}"""),format.raw/*191.5*/("""); 
-	"""),format.raw/*192.2*/("""}"""),format.raw/*192.3*/("""
+	    	      	"""),format.raw/*188.14*/("""}"""),format.raw/*188.15*/("""); 
+	    	    """),format.raw/*189.11*/("""}"""),format.raw/*189.12*/("""
+	    		
+	    		 $('#majorLayout').append(rows);
+	    """),format.raw/*192.6*/("""}"""),format.raw/*192.7*/("""
+	  """),format.raw/*193.4*/("""}"""),format.raw/*193.5*/("""); 
+	"""),format.raw/*194.2*/("""}"""),format.raw/*194.3*/("""
 	
 </script>
 </head>
 
 <body>
-
-	<div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span2">
-          <div class="well sidebar-nav">
-            <ul id="rssList" class="nav nav-list">
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div id="span10" class="span10">
-          <div id="contentId">
-          </div>
-        </div><!--/span-->
-      </div><!--/row-->
-      
-      
-      <!-- Button to trigger modal -->
-	<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-	 
-	<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h3 id="myModalLabel"></h3>
-	  </div>
-	  <div id="modelBody" class="modal-body">
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-	    <button class="btn btn-primary">Save changes</button>
-	  </div>
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" style='height:800px; position:relative;overflow:auto' data-spy="scroll"  data-offset="0">
+		<ul id="rssList" ></ul>
+	</div>
+	<div class="col-xs-12 col-sm-9" style='height:800px; position:relative;overflow:auto' data-spy="scroll"  data-offset="0">
+		<div id="majorLayout" >
+		</div>
 	</div>
 </body>
 </html>
@@ -261,11 +238,11 @@ function parseRSS(url, callback) """),format.raw/*172.34*/("""{"""),format.raw/*
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Nov 08 12:04:35 CST 2013
-                    SOURCE: /Users/pdbi/Documents/PlayWorkSpace/RSS_copy/app/views/readerForm.scala.html
-                    HASH: 8d8f0dafc226f3ceae3155de18cc595dcf92a933
-                    MATRIX: 651->2|686->29|725->31|1066->344|1095->345|1186->409|1214->410|1262->430|1291->431|1349->462|1377->463|1434->492|1463->493|1520->523|1548->524|1592->540|1621->541|1696->589|1724->590|1824->662|1853->663|2048->830|2077->831|2196->923|2224->924|9610->8285|9640->8286|9808->8426|9837->8427|9881->8442|9911->8443|10045->8548|10075->8549|10128->8573|10158->8574|10295->8683|10325->8684|10360->8691|10389->8692|10420->8695|10449->8696|10573->8791|10603->8792|10633->8793|10663->8794|10715->8817|10745->8818|10804->8849|10833->8850|10868->8856|10898->8857|10957->8888|10986->8889|11051->8925|11081->8926|11152->8968|11182->8969|11397->9155|11427->9156|11480->9180|11510->9181|11571->9213|11601->9214|11678->9263|11707->9264|11744->9273|11773->9274|11809->9282|11838->9283|11922->9338|11952->9339|12023->9381|12053->9382|12234->9534|12264->9535|12311->9553|12341->9554|12400->9584|12430->9585|12502->9629|12531->9630|12569->9640|12598->9641|12634->9649|12663->9650|12709->9668|12738->9669|12805->9707|12835->9708|13098->9942|13128->9943|13215->10002|13244->10003|13279->10009|13309->10010|13365->10038|13394->10039|13860->10477|13889->10478|13952->10512|13982->10513|14023->10525|14053->10526|14257->10701|14287->10702|14387->10773|14417->10774|14489->10818|14519->10819|14679->10950|14709->10951|14802->11015|14832->11016|14919->11074|14949->11075|15018->11115|15048->11116|15176->11216|15205->11217|15237->11221|15266->11222|15299->11227|15328->11228
-                    LINES: 22->2|22->2|22->2|34->14|34->14|37->17|37->17|38->18|38->18|40->20|40->20|42->22|42->22|44->24|44->24|45->25|45->25|48->28|48->28|52->32|52->32|54->34|54->34|56->36|56->36|124->104|124->104|127->107|127->107|129->109|129->109|132->112|132->112|133->113|133->113|135->115|135->115|136->116|136->116|137->117|137->117|140->120|140->120|140->120|140->120|141->121|141->121|143->123|143->123|143->123|143->123|145->125|145->125|147->127|147->127|148->128|148->128|151->131|151->131|151->131|151->131|152->132|152->132|153->133|153->133|154->134|154->134|155->135|155->135|158->138|158->138|159->139|159->139|163->143|163->143|163->143|163->143|164->144|164->144|165->145|165->145|166->146|166->146|167->147|167->147|169->149|169->149|170->150|170->150|175->155|175->155|177->157|177->157|177->157|177->157|179->159|179->159|191->171|191->171|192->172|192->172|193->173|193->173|196->176|196->176|198->178|198->178|200->180|200->180|202->182|202->182|203->183|203->183|205->185|205->185|207->187|207->187|210->190|210->190|211->191|211->191|212->192|212->192
+                    DATE: Wed Nov 13 20:59:03 CST 2013
+                    SOURCE: /Users/pdbi/Documents/PlayWorkSpace/MyReader/app/views/readerForm.scala.html
+                    HASH: f0b6c77e0c86218e0e6c932cdc0939c0df5fe72a
+                    MATRIX: 651->2|690->33|729->35|1070->348|1099->349|1190->413|1218->414|1266->434|1295->435|1353->466|1381->467|1438->496|1467->497|1524->527|1552->528|1596->544|1625->545|1700->593|1728->594|1828->666|1857->667|9722->8507|9752->8508|9979->8707|10008->8708|10061->8732|10091->8733|10225->8838|10255->8839|10308->8863|10338->8864|10475->8973|10505->8974|10540->8981|10569->8982|10600->8985|10629->8986|10753->9081|10783->9082|10813->9083|10843->9084|10895->9107|10925->9108|10984->9139|11013->9140|11048->9146|11078->9147|11137->9178|11166->9179|11231->9215|11261->9216|11332->9258|11362->9259|11577->9445|11607->9446|11660->9470|11690->9471|11751->9503|11781->9504|11858->9553|11887->9554|11924->9563|11953->9564|11989->9572|12018->9573|12102->9628|12132->9629|12203->9671|12233->9672|12414->9824|12444->9825|12491->9843|12521->9844|12580->9874|12610->9875|12682->9919|12711->9920|12749->9930|12778->9931|12814->9939|12843->9940|12889->9958|12918->9959|12985->9997|13015->9998|13838->10793|13867->10794|13930->10828|13960->10829|14001->10841|14031->10842|14235->11017|14265->11018|14326->11050|14356->11051|14429->11096|14459->11097|14580->11189|14610->11190|14703->11254|14733->11255|14820->11313|14850->11314|14893->11328|14923->11329|15005->11383|15034->11384|15066->11388|15095->11389|15128->11394|15157->11395
+                    LINES: 22->2|22->2|22->2|34->14|34->14|37->17|37->17|38->18|38->18|40->20|40->20|42->22|42->22|44->24|44->24|45->25|45->25|48->28|48->28|52->32|52->32|126->106|126->106|131->111|131->111|133->113|133->113|136->116|136->116|137->117|137->117|139->119|139->119|140->120|140->120|141->121|141->121|144->124|144->124|144->124|144->124|145->125|145->125|147->127|147->127|147->127|147->127|149->129|149->129|151->131|151->131|152->132|152->132|155->135|155->135|155->135|155->135|156->136|156->136|157->137|157->137|158->138|158->138|159->139|159->139|162->142|162->142|163->143|163->143|167->147|167->147|167->147|167->147|168->148|168->148|169->149|169->149|170->150|170->150|171->151|171->151|173->153|173->153|174->154|174->154|195->175|195->175|196->176|196->176|197->177|197->177|200->180|200->180|201->181|201->181|203->183|203->183|205->185|205->185|206->186|206->186|208->188|208->188|209->189|209->189|212->192|212->192|213->193|213->193|214->194|214->194
                     -- GENERATED --
                 */
             

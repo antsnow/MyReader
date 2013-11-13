@@ -7,7 +7,8 @@ GET     /                           controllers.Application.index
 
 #RSS reader form show
 GET		/rss						controllers.ReaderController.show
-GET		/rssN						controllers.ReaderController.showNewStyle
+
+POST    /register                  controllers.Application.save
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

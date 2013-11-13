@@ -12,9 +12,5 @@ object ReaderController extends Controller {
   def show = Action {
 	Ok(views.html.readerForm())
   }
-
-  def showNewStyle = Action {
-	Ok(views.html.readerNew())
-  }
   
 }

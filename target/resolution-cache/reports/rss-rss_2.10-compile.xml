@@ -7,11 +7,11 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20131108120416"/>
+		date="20131113205802"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="anorm_2.10">
-			<revision name="2.2.1" status="release" pubdate="20131030164410" resolver="local" artresolver="local" downloaded="false" searched="true" default="false" conf="default(compile), compile" position="46">
-				<metadata-artifact status="no" details="" size="1798" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/com.typesafe.play/anorm_2.10/ivy-2.2.1.xml" searched="true" original-local-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/anorm_2.10/2.2.1/ivys/ivy.xml" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/anorm_2.10/2.2.1/ivys/ivy.xml"/>
+			<revision name="2.2.1" status="release" pubdate="20131030164410" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="46">
+				<metadata-artifact status="no" details="" size="1798" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/com.typesafe.play/anorm_2.10/ivy-2.2.1.xml" searched="false" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/anorm_2.10/2.2.1/ivys/ivy.xml"/>
 				<caller organisation="rss" name="rss_2.10" conf="compile" rev="2.2.1" rev-constraint-default="2.2.1" rev-constraint-dynamic="2.2.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="anorm_2.10" type="jar" ext="jar" status="no" details="" size="294444" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/anorm_2.10/2.2.1/jars/anorm_2.10.jar">
@@ -21,8 +21,8 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc_2.10">
-			<revision name="2.2.1" status="release" pubdate="20131030164410" resolver="local" artresolver="local" downloaded="false" searched="true" default="false" conf="default(compile), compile" position="41">
-				<metadata-artifact status="no" details="" size="2409" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/com.typesafe.play/play-jdbc_2.10/ivy-2.2.1.xml" searched="true" original-local-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/play-jdbc_2.10/2.2.1/ivys/ivy.xml" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/play-jdbc_2.10/2.2.1/ivys/ivy.xml"/>
+			<revision name="2.2.1" status="release" pubdate="20131030164410" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="41">
+				<metadata-artifact status="no" details="" size="2409" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/com.typesafe.play/play-jdbc_2.10/ivy-2.2.1.xml" searched="false" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/play-jdbc_2.10/2.2.1/ivys/ivy.xml"/>
 				<caller organisation="rss" name="rss_2.10" conf="compile" rev="2.2.1" rev-constraint-default="2.2.1" rev-constraint-dynamic="2.2.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-jdbc_2.10" type="jar" ext="jar" status="no" details="" size="201709" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.typesafe.play/play-jdbc_2.10/2.2.1/jars/play-jdbc_2.10.jar">
@@ -32,8 +32,8 @@
 			</revision>
 		</module>
 		<module organisation="tyrex" name="tyrex">
-			<revision name="1.0.1" status="release" pubdate="20120905080950" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="45">
-				<metadata-artifact status="no" details="" size="2176" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/tyrex/tyrex/ivy-1.0.1.xml" searched="true" original-local-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/tyrex/tyrex/1.0.1/ivys/ivy.xml" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/tyrex/tyrex/1.0.1/ivys/ivy.xml"/>
+			<revision name="1.0.1" status="release" pubdate="20120905080950" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="45">
+				<metadata-artifact status="no" details="" size="2165" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/tyrex/tyrex/ivy-1.0.1.xml" searched="false" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/tyrex/tyrex/1.0.1/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.10" conf="compile" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="2.2.1"/>
 				<artifacts>
 					<artifact name="tyrex" type="jar" ext="jar" status="no" details="" size="201315" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/tyrex/tyrex/1.0.1/jars/tyrex.jar">
@@ -66,8 +66,8 @@
 			</revision>
 		</module>
 		<module organisation="com.jolbox" name="bonecp">
-			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023224844" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="42">
-				<metadata-artifact status="no" details="" size="9258" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/com.jolbox/bonecp/ivy-0.8.0.RELEASE.xml" searched="true" original-local-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.jolbox/bonecp/0.8.0.RELEASE/ivys/ivy.xml" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.jolbox/bonecp/0.8.0.RELEASE/ivys/ivy.xml"/>
+			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023224844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="42">
+				<metadata-artifact status="no" details="" size="9248" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/framework/../repository/cache/com.jolbox/bonecp/ivy-0.8.0.RELEASE.xml" searched="false" origin-is-local="true" origin-location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.jolbox/bonecp/0.8.0.RELEASE/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.10" conf="compile" rev="0.8.0.RELEASE" rev-constraint-default="0.8.0.RELEASE" rev-constraint-dynamic="0.8.0.RELEASE" callerrev="2.2.1"/>
 				<artifacts>
 					<artifact name="bonecp" type="bundle" ext="jar" status="no" details="" size="110600" time="0" location="/usr/local/Cellar/play/2.2.1/libexec/repository/local/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar">

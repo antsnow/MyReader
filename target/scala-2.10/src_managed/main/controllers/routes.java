@@ -1,6 +1,6 @@
-// @SOURCE:/Users/pdbi/Documents/PlayWorkSpace/RSS_copy/conf/routes
-// @HASH:b08d8e924e1df4cb74a3c9ef56f7ece6f74fcb2e
-// @DATE:Fri Nov 08 12:15:33 CST 2013
+// @SOURCE:/Users/pdbi/Documents/PlayWorkSpace/MyReader/conf/routes
+// @HASH:72670b603e376278727c658d5e8bd4fd175d3fca
+// @DATE:Wed Nov 13 22:07:40 CST 2013
 
 package controllers;
 

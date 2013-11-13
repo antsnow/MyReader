@@ -1,9 +1,9 @@
 
-@main("Welcome to Play 2.1") {
+@main("Welcome to Play 2.1 New") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reader123 </title> 
+    <title>Reader New</title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -30,17 +30,14 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-	/* var links = ["http://feed.feedsky.com/leica", "http://feeds.feedburner.com/RailsInside" ,"http://apple4.us/feed"];
-	for ( var int = 0; int < links.length; int++) {
-		$('#rssList').append('<li><a onclick=\"parseRSS(\''+links[int]+'\');\">Link</a></li>');
-	} */
+
 	var data =[
 			['0','4G spaces','4G spaces','http://blog.youxu.info/feed/','http://blog.youxu.info'],
 			['1','Ajaxian » Front Page','Ajaxian » Front Page','http://feeds.feedburner.com/ajaxian','http://ajaxian.com'],
 			['2','Android Developers Blog','Android Developers Blog','http://android-developers.blogspot.com/atom.xml','http://android-developers.blogspot.com/'],
 			['3','Apple4.us','Apple4.us','http://apple4.us/feed','http://apple4us.com'],
 			['4','Autoblog 简体中文版','Autoblog 简体中文版','http://cn.autoblog.com/rss.xml','http://cn.autoblog.com'],
-			['5','BlogJava-庄周梦蝶','BlogJava-庄周梦蝶','http://feed.feedsky.com/killme2008','http://www.blogjava.net/killme2008/'],
+			['5','BlogJava-庄周梦蝶','BlogJava-庄周梦蝶','http://www.blog.fnil.net/index.php/feed','http://www.blog.fnil.net/index.php/feed'],
 			['6','cnBeta.COM','cnBeta.COM','http://www.cnbeta.com/backend.php','http://www.cnbeta.com'],
 			['7','Community : All Content - jBPM','Community : All Content - jBPM','http://community.jboss.org/community/feeds/allcontent?community=2034','https://community.jboss.org/community/jbpm'],
 			['8','demo@@virushuo','demo@@virushuo','http://feeds2.feedburner.com/virushuo','http://blog.devep.net/virushuo/'],
@@ -99,13 +96,20 @@ $(document).ready(function() {
 			['62','阮一峰的网络日志','阮一峰的网络日志','http://feeds.feedburner.com/ruanyifeng','http://www.ruanyifeng.com/blog/'],
 			['63','随便玩玩','随便玩玩','http://feed.feedsky.com/victorsos','http://www.zhengkun.org/blog'],
 			['64','韩寒','韩寒','http://blog.sina.com.cn/rss/1191258123.xml','http://blog.sina.com.cn/twocold'],
-			['65','java eye total','java eye total','null','null']
+			['65','JavaEye新闻','JavaEye新闻','http://www.javaeye.com/rss/news','http://www.iteye.com'],
+			['66','Scala fineqtbull','fineqtbull','http://fineqtbull.iteye.com/rss','http://www.iteye.com'],
+			['67','淘宝核心系统团队博客','淘宝核心系统团队博客','http://rdc.taobao.com/blog/cs/?feed=rss2', 'http://rdc.taobao.com/blog/cs/?feed=rss2'],
+			['68', 'UC技术博客','UC技术博客', 'http://tech.uc.cn/?feed=rss2','http://tech.uc.cn/?feed=rss2'],
+			['69', '结构之法 算法之道','结构之法 算法之道','feed://blog.csdn.net/v_july_v/rss/list','feed://blog.csdn.net/v_july_v/rss/list']
+			
 	];
 	for ( var int = 0; int < data.length; int++) {
 		var record = data[int];
-		$('#rssList').append('<li><a href="#" onclick=\"parseRSS(\''+ record[3]+ '\');\">' + record[1] +'</a></li>');
+		$('#rssList').append('<li class="list-group-item"><span class="badge">14</span><a href="#" onclick=\"parseRSS(\''+ record[3]+ '\');\">' + record[1] +'</a></li>');
+		
+		
 	}
-	
+	debugger;
 	/*  $.ajax({
 		    url: '/RSS/app/ajax/list/getSubscriptions',
 		    dataType: 'json',
@@ -149,24 +153,24 @@ $(document).ready(function() {
 });
 function createCollapseStyle(e, i) {
 	
-	var content = '<div class="accordion-group">';
-		content += ' <div class="accordion-heading">';
-			content += ' <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#' + i + '">';
-			if( i % 2 == 0)	 {
-				content += '<p class="muted">' + e.title + '</p>';
-			} else {
-				content += e.title;
-			}
-			
-			content += '</a>';
-		content += '</div>';
-		content += '<div id="' + i + '" class="accordion-body collapse">';
-			content += '<div class="accordion-inner">';
-				content += "<div class='contentId'><div class='hero-unit'><a target='_blank' href='" + e.link + "'>" + e.title +"</a>" + "<p>" + e.author + "</p>" + e.content + "</div></div>";
-			content += "</div>";
-		content += "</div>";
-		content += "</div>";
-		
+		var content = '<div class="panel-group" id="accordion">';
+				content += 	'<div class="panel panel-default">';
+				content += 		'<div class="panel-heading">';
+				content +=			'<h4 class="panel-title">';
+				content +=				'<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#' + i + '">';
+				content +=				 e.title;
+				content +=				'</a>';
+				content +=			'</h4>';
+				content +=		'</div>';
+				content +=	'<div id="' + i + '" class="panel-collapse collapse">';
+				content +=		'<div class="panel-body">';
+				
+				content +=			'<h4><a target="_blank" href="' + e.link + '">' + e.title +'</a></h4><p>' + e.author + '</p>' + e.content;
+				content +=		'</div>';
+				content +=	'</div>';
+				content +=	'</div>';
+				content +=	'</div>';
+
 		return content;
 }
 function parseRSS(url, callback) {
@@ -174,19 +178,17 @@ function parseRSS(url, callback) {
 	    url: 'http://ajax.googleapis.com/ajax/services/feed/load?q=' + encodeURIComponent(url) + '&v=1.0&num=50&callback=?',
 	    dataType: 'json',
 	    success: function(data) {
-	    	 	var el = document.getElementById('contentId');
-	    	 	if(el) {
-	    	 		$('.contentId').remove();
+	    	 	if(	$('#majorLayout')) {
+	    	 		$('#majorLayout').empty();
 	    	 	}
-	    		var rows = '<div class="accordion" id="accordion2">';
+	    		var rows = '';
 	    		if (data.responseData.feed && data.responseData.feed.entries) {
 	    			$.each(data.responseData.feed.entries, function (i, e) {
 	    				rows += createCollapseStyle(e, i);
 	    	      	}); 
-	    			rows += '</div>';
 	    	    }
-	    		rows = "<div class='contentId'>" + rows + "</div>";
-	    		 $('#span10').append(rows);
+	    		
+	    		 $('#majorLayout').append(rows);
 	    }
 	  }); 
 	}
@@ -195,37 +197,12 @@ function parseRSS(url, callback) {
 </head>
 
 <body>
-
-	<div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span2">
-          <div class="well sidebar-nav">
-            <ul id="rssList" class="nav nav-list">
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div id="span10" class="span10">
-          <div id="contentId">
-          </div>
-        </div><!--/span-->
-      </div><!--/row-->
-      
-      
-      <!-- Button to trigger modal -->
-	<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-	 
-	<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h3 id="myModalLabel"></h3>
-	  </div>
-	  <div id="modelBody" class="modal-body">
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-	    <button class="btn btn-primary">Save changes</button>
-	  </div>
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" style='height:800px; position:relative;overflow:auto' data-spy="scroll"  data-offset="0">
+		<ul id="rssList" ></ul>
+	</div>
+	<div class="col-xs-12 col-sm-9" style='height:800px; position:relative;overflow:auto' data-spy="scroll"  data-offset="0">
+		<div id="majorLayout" >
+		</div>
 	</div>
 </body>
 </html>
