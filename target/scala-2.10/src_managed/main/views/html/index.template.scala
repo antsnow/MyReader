@@ -69,14 +69,16 @@ Seq[Any](_display_(Seq[Any](/*2.2*/main("Welcome to Play 2.1 New")/*2.33*/ {_dis
     <div class="container">
 
          """),_display_(Seq[Any](/*50.11*/form(routes.Application.save())/*50.42*/ {_display_(Seq[Any](format.raw/*50.44*/("""
-           <h2 class="form-signin-heading">Please sign in</h2>
-           <input type="text" name="email" class="input-block-level" placeholder="Email address">
-           <input type="password" name="password" class="input-block-level" placeholder="Password">
-           <label class="checkbox">
-             <input type="checkbox" value="remember-me"> Remember me
-           </label>
-           <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-         """)))})),format.raw/*58.11*/("""
+		 	<div class="form-signin">
+          	    <h2 class="form-signin-heading">Please sign in</h2>
+           		<input type="text" name="email" class="input-block-level" placeholder="Email address">
+           	 	<input type="password" name="password" class="input-block-level" placeholder="Password">
+           	 	<label class="checkbox">
+             	   <input type="checkbox" value="remember-me"> Remember me
+           		</label>
+           	 	<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+	   	 	</div>
+         """)))})),format.raw/*60.11*/("""
 
        </div> <!-- /container -->
 	
@@ -94,11 +96,11 @@ Seq[Any](_display_(Seq[Any](/*2.2*/main("Welcome to Play 2.1 New")/*2.33*/ {_dis
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Nov 13 22:05:27 CST 2013
+                    DATE: Wed Nov 13 22:15:51 CST 2013
                     SOURCE: /Users/pdbi/Documents/PlayWorkSpace/MyReader/app/views/index.scala.html
-                    HASH: ba956f142251601c190c17d4e5bcff54432d5e7c
-                    MATRIX: 662->18|701->49|740->51|1078->361|1107->362|1229->457|1257->458|1305->478|1334->479|1784->902|1812->903|1909->972|1938->973|1999->1007|2027->1008|2135->1088|2164->1089|2295->1193|2323->1194|2429->1264|2469->1295|2509->1297|3022->1778
-                    LINES: 23->2|23->2|23->2|33->12|33->12|37->16|37->16|39->18|39->18|51->30|51->30|53->32|53->32|55->34|55->34|57->36|57->36|62->41|62->41|71->50|71->50|71->50|79->58
+                    HASH: b4d07765b0f289e179659c08ace2311f657f7a65
+                    MATRIX: 662->18|701->49|740->51|1078->361|1107->362|1229->457|1257->458|1305->478|1334->479|1784->902|1812->903|1909->972|1938->973|1999->1007|2027->1008|2135->1088|2164->1089|2295->1193|2323->1194|2429->1264|2469->1295|2509->1297|3087->1843
+                    LINES: 23->2|23->2|23->2|33->12|33->12|37->16|37->16|39->18|39->18|51->30|51->30|53->32|53->32|55->34|55->34|57->36|57->36|62->41|62->41|71->50|71->50|71->50|81->60
                     -- GENERATED --
                 */
             
