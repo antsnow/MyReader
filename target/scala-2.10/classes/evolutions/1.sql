@@ -28,3 +28,23 @@
 --     MAXVALUE 9223372036854775807
 --     START 1
 --     CACHE 1;
+
+
+-- CREATE TABLE users
+-- (
+--   id character varying(40) NOT NULL,
+--   active character(1),
+--   email character varying(255),
+--   password character varying(255),
+--   CONSTRAINT users_pkey PRIMARY KEY (id )
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+
+  -- CREATE SEQUENCE users_seq
+  --   INCREMENT 1
+  --   MINVALUE 1
+  --   MAXVALUE 9223372036854775807
+  --   START 1
+  --   CACHE 1;

@@ -11,11 +11,12 @@ import models._
 
 object Application extends Controller {
   
-  def index = Action {
-	  val feed = new Feed(null,"1","2","3")
+  def index = Action {implicit request =>
+	  var ss = request.session.get("connected")
+	  val feed = new Feed(null,"1","2", ss.toString)
 	 
 	  Feed.insert(feed)
-	  Ok(views.html.index())
+	  Ok(views.html.index()).withSession( "connected" -> "user@gmail.com")
   }
   
   val loginForm = Form(
