@@ -72,7 +72,7 @@ object Feed {
       SQL(
         """
           insert into subscriptions values (
-            (select next value for feed_seq), 
+            (select nextval('feed_seq') ), 
             {title}, {xmlurl}, {htmlurl}
           )
         """

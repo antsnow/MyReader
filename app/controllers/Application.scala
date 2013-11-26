@@ -6,12 +6,16 @@ import java.io._
 import java.net._
 import play.api.data._
 import play.api.data.Forms._
+import models._
+
 
 object Application extends Controller {
   
   def index = Action {
-	
-	Ok(views.html.index())
+	  val feed = new Feed(null,"1","2","3")
+	 
+	  Feed.insert(feed)
+	  Ok(views.html.index())
   }
   
   val loginForm = Form(
