@@ -1,1 +1,4 @@
 run
+run "80"
+run "8080"
+~run

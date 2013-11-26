@@ -1,0 +1,36 @@
+
+@main("Welcome to Play 2.1 New") {
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reader New</title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+<style type="text/css">
+     
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+	});
+</script>
+</head>
+
+<body>
+	@helper.form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+    
+	    <input type="file" name="picture">
+    
+	    <p>
+	        <input type="submit">
+	    </p>
+    
+	}
+</body>
+</html>
+}

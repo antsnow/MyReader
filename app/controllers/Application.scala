@@ -25,7 +25,21 @@ object Application extends Controller {
     val (email, password) = loginForm.bindFromRequest.get
 	print((email, password))
 	loginForm.fill((email, password))
-	Ok(views.html.index())
+	Ok(views.html.loginForm())
   }
   
+  def upload = Action(parse.multipartFormData) { request =>
+    request.body.file("picture").map { picture =>
+      import java.io.File
+      val filename = picture.filename
+      val contentType = picture.contentType
+      picture.ref.moveTo(new File(s"/tmp/picture/$filename"))
+	  
+	  
+      Ok("File uploaded" + filename +contentType )
+    }.getOrElse {
+      Redirect(routes.Application.index).flashing(
+        "error" -> "Missing file")
+    }
+  }
 }

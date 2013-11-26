@@ -1,3 +1,6 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
 [0m[[0mdebug[0m] [0m	(/Users/pdbi/Documents/PlayWorkSpace/MyReader/conf/application.conf,/Users/pdbi/Documents/PlayWorkSpace/MyReader/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/pdbi/Documents/PlayWorkSpace/MyReader/conf/evolutions,/Users/pdbi/Documents/PlayWorkSpace/MyReader/target/scala-2.10/classes/evolutions)[0m
 [0m[[0mdebug[0m] [0m	(/Users/pdbi/Documents/PlayWorkSpace/MyReader/conf/routes,/Users/pdbi/Documents/PlayWorkSpace/MyReader/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/pdbi/Documents/PlayWorkSpace/MyReader/conf/evolutions/1.sql,/Users/pdbi/Documents/PlayWorkSpace/MyReader/target/scala-2.10/classes/evolutions/1.sql)[0m
+[0m[[0mdebug[0m] [0m	(/Users/pdbi/Documents/PlayWorkSpace/MyReader/conf/evolutions/default,/Users/pdbi/Documents/PlayWorkSpace/MyReader/target/scala-2.10/classes/evolutions/default)[0m

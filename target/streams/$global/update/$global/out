@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2dc06567[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@25d688e3[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.2 in sbt-chain[0m
@@ -577,6 +577,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving postgresql#postgresql;9.1-901.jdbc4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: postgresql#postgresql;9.1-901.jdbc4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /usr/local/Cellar/play/2.2.1/libexec/repository/local/postgresql/postgresql/9.1-901.jdbc4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for postgresql#postgresql;9.1-901.jdbc4[0m
+[0m[[0mdebug[0m] [0m		tried file:/Users/pdbi/.m2/repository/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom[0m
+[0m[[0mdebug[0m] [0m	Maven2 Local: no ivy file found for postgresql#postgresql;9.1-901.jdbc4[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for postgresql#postgresql;9.1-901.jdbc4[0m
+[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom (9.1-901.jdbc4)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] postgresql#postgresql;9.1-901.jdbc4!postgresql.pom(pom.original) (1032ms)[0m
+[0m[[0mdebug[0m] [0m		tried /usr/local/Cellar/play/2.2.1/libexec/repository/local/postgresql/postgresql/9.1-901.jdbc4/jars/postgresql.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:/Users/pdbi/.m2/repository/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar[0m
+[0m[[0mdebug[0m] [0m	found postgresql#postgresql;9.1-901.jdbc4 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [compile][0m
@@ -911,6 +933,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [runtime][0m
@@ -1246,6 +1272,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.2.1 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.10;2.2.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.10;2.2.1 {test=[default(compile)]}[0m
@@ -2509,6 +2539,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -2846,6 +2880,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for rss#rss_2.10;1.0-SNAPSHOT [test-internal][0m
@@ -3183,6 +3221,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#anorm_2.10;2.2.1->org.scala-lang#scala-library;2.10.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->postgresql#postgresql;9.1-901.jdbc4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies rss#rss_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.2.1 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.2.1->com.typesafe.play#play_2.10;2.2.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.2.1->junit#junit;4.11 [compile->default(compile)][0m
@@ -4354,6 +4396,12 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play_2.10;2.2.1!play_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.10;2.2.1!play-jdbc_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#anorm_2.10;2.2.1!anorm_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] postgresql#postgresql;9.1-901.jdbc4!postgresql.jar (10269ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#sbt-link;2.2.1!sbt-link.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.2.1!play-exceptions.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#templates_2.10;2.2.1!templates_2.10.jar[0m
@@ -4458,7 +4506,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.2!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3809ms :: artifacts dl 120ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10072ms :: artifacts dl 10396ms[0m
 [0m[[0mdebug[0m] [0m	report for rss#rss_2.10;1.0-SNAPSHOT compile produced in /Users/pdbi/Documents/PlayWorkSpace/MyReader/target/resolution-cache/reports/rss-rss_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for rss#rss_2.10;1.0-SNAPSHOT runtime produced in /Users/pdbi/Documents/PlayWorkSpace/MyReader/target/resolution-cache/reports/rss-rss_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for rss#rss_2.10;1.0-SNAPSHOT test produced in /Users/pdbi/Documents/PlayWorkSpace/MyReader/target/resolution-cache/reports/rss-rss_2.10-test.xml[0m
@@ -4472,5 +4520,5 @@
 [0m[[0mdebug[0m] [0m	report for rss#rss_2.10;1.0-SNAPSHOT docs produced in /Users/pdbi/Documents/PlayWorkSpace/MyReader/target/resolution-cache/reports/rss-rss_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for rss#rss_2.10;1.0-SNAPSHOT pom produced in /Users/pdbi/Documents/PlayWorkSpace/MyReader/target/resolution-cache/reports/rss-rss_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for rss#rss_2.10;1.0-SNAPSHOT scala-tool produced in /Users/pdbi/Documents/PlayWorkSpace/MyReader/target/resolution-cache/reports/rss-rss_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3809ms resolve - 120ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10072ms resolve - 10396ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

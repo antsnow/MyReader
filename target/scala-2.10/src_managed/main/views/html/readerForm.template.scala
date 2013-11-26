@@ -120,58 +120,65 @@ $(document).ready(function() """),format.raw/*32.30*/("""{"""),format.raw/*32.31
 			['66','Scala fineqtbull','fineqtbull','http://fineqtbull.iteye.com/rss','http://www.iteye.com'],
 			['67','淘宝核心系统团队博客','淘宝核心系统团队博客','http://rdc.taobao.com/blog/cs/?feed=rss2', 'http://rdc.taobao.com/blog/cs/?feed=rss2'],
 			['68', 'UC技术博客','UC技术博客', 'http://tech.uc.cn/?feed=rss2','http://tech.uc.cn/?feed=rss2'],
-			['69', '结构之法 算法之道','结构之法 算法之道','feed://blog.csdn.net/v_july_v/rss/list','feed://blog.csdn.net/v_july_v/rss/list']
+			['69', '结构之法 算法之道','结构之法 算法之道','http://blog.csdn.net/v_july_v/rss/list','http://blog.csdn.net/v_july_v/rss/list'],
+			['70','leaskh', 'leaskh', 'http://www.leaskh.com/feed/', 'http://www.leaskh.com/feed/'],
+			['71', 'auntbear','http://www.auntbear.com/feed','http://www.auntbear.com/feed'],
+			['72','与食巨近 贱多食广','http://blog.sina.com.cn/rss/1676594533.xml','http://blog.sina.com.cn/rss/1676594533.xml'],
+			['73','talich 闲侃','http://talich.cinepedia.cn/?feed=rss2','http://talich.cinepedia.cn/?feed=rss2'],
+			['74','采铜学心录','http://xuexinlu.blogbus.com/index.rdf','http://xuexinlu.blogbus.com/index.rdf'],
+			['75','web2.0','http://feed.feedsky.com/showeb20','http://feed.feedsky.com/showeb20'],
+			['76','知乎','http://www.zhihu.com/rss','http://www.zhihu.com/rss']
 			
 	];
-	for ( var int = 0; int < data.length; int++) """),format.raw/*106.47*/("""{"""),format.raw/*106.48*/("""
+	for ( var int = 0; int < data.length; int++) """),format.raw/*113.47*/("""{"""),format.raw/*113.48*/("""
 		var record = data[int];
 		$('#rssList').append('<li class="list-group-item"><span class="badge">14</span><a href="#" onclick=\"parseRSS(\''+ record[3]+ '\');\">' + record[1] +'</a></li>');
 		
 		
-	"""),format.raw/*111.2*/("""}"""),format.raw/*111.3*/("""
+	"""),format.raw/*118.2*/("""}"""),format.raw/*118.3*/("""
 	debugger;
-	/*  $.ajax("""),format.raw/*113.13*/("""{"""),format.raw/*113.14*/("""
+	/*  $.ajax("""),format.raw/*120.13*/("""{"""),format.raw/*120.14*/("""
 		    url: '/RSS/app/ajax/list/getSubscriptions',
 		    dataType: 'json',
-		    success: function(data) """),format.raw/*116.31*/("""{"""),format.raw/*116.32*/("""
-		    		for(p in data) """),format.raw/*117.24*/("""{"""),format.raw/*117.25*/("""
+		    success: function(data) """),format.raw/*123.31*/("""{"""),format.raw/*123.32*/("""
+		    		for(p in data) """),format.raw/*124.24*/("""{"""),format.raw/*124.25*/("""
 		    			$('#rssList').append('<li><a onclick=\"parseRSS(\''+ data[p]+ '\');\">' + p +'</a></li>');
-		    		"""),format.raw/*119.9*/("""}"""),format.raw/*119.10*/("""
-		    """),format.raw/*120.7*/("""}"""),format.raw/*120.8*/("""
-	 """),format.raw/*121.3*/("""}"""),format.raw/*121.4*/(""");  */
+		    		"""),format.raw/*126.9*/("""}"""),format.raw/*126.10*/("""
+		    """),format.raw/*127.7*/("""}"""),format.raw/*127.8*/("""
+	 """),format.raw/*128.3*/("""}"""),format.raw/*128.4*/(""");  */
 	
 	
-	// var dataBase = openDatabase("RSS", "1.0", "Rss table", 1024 * 1024, function () """),format.raw/*124.85*/("""{"""),format.raw/*124.86*/(""" """),format.raw/*124.87*/("""}"""),format.raw/*124.88*/(""");
-	// 	if (!dataBase) """),format.raw/*125.21*/("""{"""),format.raw/*125.22*/("""
+	// var dataBase = openDatabase("RSS", "1.0", "Rss table", 1024 * 1024, function () """),format.raw/*131.85*/("""{"""),format.raw/*131.86*/(""" """),format.raw/*131.87*/("""}"""),format.raw/*131.88*/(""");
+	// 	if (!dataBase) """),format.raw/*132.21*/("""{"""),format.raw/*132.22*/("""
 	// 		alert("数据库创建失败！");
-	// 	"""),format.raw/*127.6*/("""}"""),format.raw/*127.7*/(""" else """),format.raw/*127.13*/("""{"""),format.raw/*127.14*/("""
+	// 	"""),format.raw/*134.6*/("""}"""),format.raw/*134.7*/(""" else """),format.raw/*134.13*/("""{"""),format.raw/*134.14*/("""
 	// 		alert("数据库创建成功！");
-	// 	"""),format.raw/*129.6*/("""}"""),format.raw/*129.7*/(""" 
+	// 	"""),format.raw/*136.6*/("""}"""),format.raw/*136.7*/(""" 
 	// 	
-	// 	createTable=function() """),format.raw/*131.29*/("""{"""),format.raw/*131.30*/("""
-	// 		dataBase.transaction( function(tx) """),format.raw/*132.42*/("""{"""),format.raw/*132.43*/(""" 
+	// 	createTable=function() """),format.raw/*138.29*/("""{"""),format.raw/*138.30*/("""
+	// 		dataBase.transaction( function(tx) """),format.raw/*139.42*/("""{"""),format.raw/*139.43*/(""" 
 	// 			tx.executeSql("create table if not exists address (id REAL UNIQUE, title TEXT, name TEXT, xmlUrl TEXT, htmlUrl TEXT, userId TEXT)", 
 	// 						[], 
-	// 						function(tx,result)"""),format.raw/*135.30*/("""{"""),format.raw/*135.31*/(""" alert('创建address表成功'); """),format.raw/*135.55*/("""}"""),format.raw/*135.56*/(""", 
-	// 						function(tx, error)"""),format.raw/*136.30*/("""{"""),format.raw/*136.31*/(""" alert('创建address表失败:' + error.message); 
-	// 			"""),format.raw/*137.8*/("""}"""),format.raw/*137.9*/(""");
-	// 		"""),format.raw/*138.7*/("""}"""),format.raw/*138.8*/(""");
-	// 	"""),format.raw/*139.6*/("""}"""),format.raw/*139.7*/("""; 
+	// 						function(tx,result)"""),format.raw/*142.30*/("""{"""),format.raw/*142.31*/(""" alert('创建address表成功'); """),format.raw/*142.55*/("""}"""),format.raw/*142.56*/(""", 
+	// 						function(tx, error)"""),format.raw/*143.30*/("""{"""),format.raw/*143.31*/(""" alert('创建address表失败:' + error.message); 
+	// 			"""),format.raw/*144.8*/("""}"""),format.raw/*144.9*/(""");
+	// 		"""),format.raw/*145.7*/("""}"""),format.raw/*145.8*/(""");
+	// 	"""),format.raw/*146.6*/("""}"""),format.raw/*146.7*/("""; 
 	// 	createTable();
 	// 	
-	// 	insert = function () """),format.raw/*142.27*/("""{"""),format.raw/*142.28*/("""
-	// 		dataBase.transaction(function (tx) """),format.raw/*143.42*/("""{"""),format.raw/*143.43*/("""
+	// 	insert = function () """),format.raw/*149.27*/("""{"""),format.raw/*149.28*/("""
+	// 		dataBase.transaction(function (tx) """),format.raw/*150.42*/("""{"""),format.raw/*150.43*/("""
 	// 		tx.executeSql(
 	// 		"insert into stu (id, title, name, xmlUrl, htmlUrl, userId) values(?, ?, ?, ?, ?)",
 	// 		['02', 'abc'],
-	// 			function () """),format.raw/*147.20*/("""{"""),format.raw/*147.21*/(""" alert('添加数据成功'); """),format.raw/*147.39*/("""}"""),format.raw/*147.40*/(""",
-	// 			function (tx, error) """),format.raw/*148.29*/("""{"""),format.raw/*148.30*/(""" alert('添加数据失败: ' + error.message); 
-	// 			"""),format.raw/*149.8*/("""}"""),format.raw/*149.9*/(""" );
-	// 		"""),format.raw/*150.7*/("""}"""),format.raw/*150.8*/(""");
-	// 	"""),format.raw/*151.6*/("""}"""),format.raw/*151.7*/(""";
+	// 			function () """),format.raw/*154.20*/("""{"""),format.raw/*154.21*/(""" alert('添加数据成功'); """),format.raw/*154.39*/("""}"""),format.raw/*154.40*/(""",
+	// 			function (tx, error) """),format.raw/*155.29*/("""{"""),format.raw/*155.30*/(""" alert('添加数据失败: ' + error.message); 
+	// 			"""),format.raw/*156.8*/("""}"""),format.raw/*156.9*/(""" );
+	// 		"""),format.raw/*157.7*/("""}"""),format.raw/*157.8*/(""");
+	// 	"""),format.raw/*158.6*/("""}"""),format.raw/*158.7*/(""";
 	// 	insert(); 
-"""),format.raw/*153.1*/("""}"""),format.raw/*153.2*/(""");
-function createCollapseStyle(e, i) """),format.raw/*154.36*/("""{"""),format.raw/*154.37*/("""
+"""),format.raw/*160.1*/("""}"""),format.raw/*160.2*/(""");
+function createCollapseStyle(e, i) """),format.raw/*161.36*/("""{"""),format.raw/*161.37*/("""
 	
 		var content = '<div class="panel-group" id="accordion">';
 				content += 	'<div class="panel panel-default">';
@@ -192,26 +199,27 @@ function createCollapseStyle(e, i) """),format.raw/*154.36*/("""{"""),format.raw
 				content +=	'</div>';
 
 		return content;
-"""),format.raw/*175.1*/("""}"""),format.raw/*175.2*/("""
-function parseRSS(url, callback) """),format.raw/*176.34*/("""{"""),format.raw/*176.35*/("""
-	   $.ajax("""),format.raw/*177.12*/("""{"""),format.raw/*177.13*/("""
-	    url: 'http://ajax.googleapis.com/ajax/services/feed/load?q=' + encodeURIComponent(url) + '&v=1.0&num=50&callback=?',
+"""),format.raw/*182.1*/("""}"""),format.raw/*182.2*/("""
+function parseRSS(url, callback) """),format.raw/*183.34*/("""{"""),format.raw/*183.35*/("""
+	   $.ajax("""),format.raw/*184.12*/("""{"""),format.raw/*184.13*/("""
+	    url: 'http://ajax.googleapis.com/ajax/services/feed/load?q=' + encodeURIComponent(url) + '&v=1.0&num=90&callback=?',
 	    dataType: 'json',
-	    success: function(data) """),format.raw/*180.30*/("""{"""),format.raw/*180.31*/("""
-	    	 	if(	$('#majorLayout')) """),format.raw/*181.32*/("""{"""),format.raw/*181.33*/("""
+	    success: function(data) """),format.raw/*187.30*/("""{"""),format.raw/*187.31*/("""
+			debugger;
+	    	 	if(	$('#majorLayout')) """),format.raw/*189.32*/("""{"""),format.raw/*189.33*/("""
 	    	 		$('#majorLayout').empty();
-	    	 	"""),format.raw/*183.9*/("""}"""),format.raw/*183.10*/("""
+	    	 	"""),format.raw/*191.9*/("""}"""),format.raw/*191.10*/("""
 	    		var rows = '';
-	    		if (data.responseData.feed && data.responseData.feed.entries) """),format.raw/*185.70*/("""{"""),format.raw/*185.71*/("""
-	    			$.each(data.responseData.feed.entries, function (i, e) """),format.raw/*186.64*/("""{"""),format.raw/*186.65*/("""
+	    		if (data.responseData.feed && data.responseData.feed.entries) """),format.raw/*193.70*/("""{"""),format.raw/*193.71*/("""
+	    			$.each(data.responseData.feed.entries, function (i, e) """),format.raw/*194.64*/("""{"""),format.raw/*194.65*/("""
 	    				rows += createCollapseStyle(e, i);
-	    	      	"""),format.raw/*188.14*/("""}"""),format.raw/*188.15*/("""); 
-	    	    """),format.raw/*189.11*/("""}"""),format.raw/*189.12*/("""
+	    	      	"""),format.raw/*196.14*/("""}"""),format.raw/*196.15*/("""); 
+	    	    """),format.raw/*197.11*/("""}"""),format.raw/*197.12*/("""
 	    		
 	    		 $('#majorLayout').append(rows);
-	    """),format.raw/*192.6*/("""}"""),format.raw/*192.7*/("""
-	  """),format.raw/*193.4*/("""}"""),format.raw/*193.5*/("""); 
-	"""),format.raw/*194.2*/("""}"""),format.raw/*194.3*/("""
+	    """),format.raw/*200.6*/("""}"""),format.raw/*200.7*/("""
+	  """),format.raw/*201.4*/("""}"""),format.raw/*201.5*/("""); 
+	"""),format.raw/*202.2*/("""}"""),format.raw/*202.3*/("""
 	
 </script>
 </head>
@@ -238,11 +246,11 @@ function parseRSS(url, callback) """),format.raw/*176.34*/("""{"""),format.raw/*
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Nov 13 20:59:03 CST 2013
+                    DATE: Mon Nov 25 16:36:25 CST 2013
                     SOURCE: /Users/pdbi/Documents/PlayWorkSpace/MyReader/app/views/readerForm.scala.html
-                    HASH: f0b6c77e0c86218e0e6c932cdc0939c0df5fe72a
-                    MATRIX: 651->2|690->33|729->35|1070->348|1099->349|1190->413|1218->414|1266->434|1295->435|1353->466|1381->467|1438->496|1467->497|1524->527|1552->528|1596->544|1625->545|1700->593|1728->594|1828->666|1857->667|9722->8507|9752->8508|9979->8707|10008->8708|10061->8732|10091->8733|10225->8838|10255->8839|10308->8863|10338->8864|10475->8973|10505->8974|10540->8981|10569->8982|10600->8985|10629->8986|10753->9081|10783->9082|10813->9083|10843->9084|10895->9107|10925->9108|10984->9139|11013->9140|11048->9146|11078->9147|11137->9178|11166->9179|11231->9215|11261->9216|11332->9258|11362->9259|11577->9445|11607->9446|11660->9470|11690->9471|11751->9503|11781->9504|11858->9553|11887->9554|11924->9563|11953->9564|11989->9572|12018->9573|12102->9628|12132->9629|12203->9671|12233->9672|12414->9824|12444->9825|12491->9843|12521->9844|12580->9874|12610->9875|12682->9919|12711->9920|12749->9930|12778->9931|12814->9939|12843->9940|12889->9958|12918->9959|12985->9997|13015->9998|13838->10793|13867->10794|13930->10828|13960->10829|14001->10841|14031->10842|14235->11017|14265->11018|14326->11050|14356->11051|14429->11096|14459->11097|14580->11189|14610->11190|14703->11254|14733->11255|14820->11313|14850->11314|14893->11328|14923->11329|15005->11383|15034->11384|15066->11388|15095->11389|15128->11394|15157->11395
-                    LINES: 22->2|22->2|22->2|34->14|34->14|37->17|37->17|38->18|38->18|40->20|40->20|42->22|42->22|44->24|44->24|45->25|45->25|48->28|48->28|52->32|52->32|126->106|126->106|131->111|131->111|133->113|133->113|136->116|136->116|137->117|137->117|139->119|139->119|140->120|140->120|141->121|141->121|144->124|144->124|144->124|144->124|145->125|145->125|147->127|147->127|147->127|147->127|149->129|149->129|151->131|151->131|152->132|152->132|155->135|155->135|155->135|155->135|156->136|156->136|157->137|157->137|158->138|158->138|159->139|159->139|162->142|162->142|163->143|163->143|167->147|167->147|167->147|167->147|168->148|168->148|169->149|169->149|170->150|170->150|171->151|171->151|173->153|173->153|174->154|174->154|195->175|195->175|196->176|196->176|197->177|197->177|200->180|200->180|201->181|201->181|203->183|203->183|205->185|205->185|206->186|206->186|208->188|208->188|209->189|209->189|212->192|212->192|213->193|213->193|214->194|214->194
+                    HASH: 72ed34868166eaaca86b30ec36f79fe1073dec7c
+                    MATRIX: 651->2|690->33|729->35|1070->348|1099->349|1190->413|1218->414|1266->434|1295->435|1353->466|1381->467|1438->496|1467->497|1524->527|1552->528|1596->544|1625->545|1700->593|1728->594|1828->666|1857->667|10374->9159|10404->9160|10631->9359|10660->9360|10713->9384|10743->9385|10877->9490|10907->9491|10960->9515|10990->9516|11127->9625|11157->9626|11192->9633|11221->9634|11252->9637|11281->9638|11405->9733|11435->9734|11465->9735|11495->9736|11547->9759|11577->9760|11636->9791|11665->9792|11700->9798|11730->9799|11789->9830|11818->9831|11883->9867|11913->9868|11984->9910|12014->9911|12229->10097|12259->10098|12312->10122|12342->10123|12403->10155|12433->10156|12510->10205|12539->10206|12576->10215|12605->10216|12641->10224|12670->10225|12754->10280|12784->10281|12855->10323|12885->10324|13066->10476|13096->10477|13143->10495|13173->10496|13232->10526|13262->10527|13334->10571|13363->10572|13401->10582|13430->10583|13466->10591|13495->10592|13541->10610|13570->10611|13637->10649|13667->10650|14490->11445|14519->11446|14582->11480|14612->11481|14653->11493|14683->11494|14887->11669|14917->11670|14991->11715|15021->11716|15094->11761|15124->11762|15245->11854|15275->11855|15368->11919|15398->11920|15485->11978|15515->11979|15558->11993|15588->11994|15670->12048|15699->12049|15731->12053|15760->12054|15793->12059|15822->12060
+                    LINES: 22->2|22->2|22->2|34->14|34->14|37->17|37->17|38->18|38->18|40->20|40->20|42->22|42->22|44->24|44->24|45->25|45->25|48->28|48->28|52->32|52->32|133->113|133->113|138->118|138->118|140->120|140->120|143->123|143->123|144->124|144->124|146->126|146->126|147->127|147->127|148->128|148->128|151->131|151->131|151->131|151->131|152->132|152->132|154->134|154->134|154->134|154->134|156->136|156->136|158->138|158->138|159->139|159->139|162->142|162->142|162->142|162->142|163->143|163->143|164->144|164->144|165->145|165->145|166->146|166->146|169->149|169->149|170->150|170->150|174->154|174->154|174->154|174->154|175->155|175->155|176->156|176->156|177->157|177->157|178->158|178->158|180->160|180->160|181->161|181->161|202->182|202->182|203->183|203->183|204->184|204->184|207->187|207->187|209->189|209->189|211->191|211->191|213->193|213->193|214->194|214->194|216->196|216->196|217->197|217->197|220->200|220->200|221->201|221->201|222->202|222->202
                     -- GENERATED --
                 */
             

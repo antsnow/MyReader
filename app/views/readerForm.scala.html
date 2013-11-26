@@ -100,7 +100,14 @@ $(document).ready(function() {
 			['66','Scala fineqtbull','fineqtbull','http://fineqtbull.iteye.com/rss','http://www.iteye.com'],
 			['67','淘宝核心系统团队博客','淘宝核心系统团队博客','http://rdc.taobao.com/blog/cs/?feed=rss2', 'http://rdc.taobao.com/blog/cs/?feed=rss2'],
 			['68', 'UC技术博客','UC技术博客', 'http://tech.uc.cn/?feed=rss2','http://tech.uc.cn/?feed=rss2'],
-			['69', '结构之法 算法之道','结构之法 算法之道','feed://blog.csdn.net/v_july_v/rss/list','feed://blog.csdn.net/v_july_v/rss/list']
+			['69', '结构之法 算法之道','结构之法 算法之道','http://blog.csdn.net/v_july_v/rss/list','http://blog.csdn.net/v_july_v/rss/list'],
+			['70','leaskh', 'leaskh', 'http://www.leaskh.com/feed/', 'http://www.leaskh.com/feed/'],
+			['71', 'auntbear','http://www.auntbear.com/feed','http://www.auntbear.com/feed'],
+			['72','与食巨近 贱多食广','http://blog.sina.com.cn/rss/1676594533.xml','http://blog.sina.com.cn/rss/1676594533.xml'],
+			['73','talich 闲侃','http://talich.cinepedia.cn/?feed=rss2','http://talich.cinepedia.cn/?feed=rss2'],
+			['74','采铜学心录','http://xuexinlu.blogbus.com/index.rdf','http://xuexinlu.blogbus.com/index.rdf'],
+			['75','web2.0','http://feed.feedsky.com/showeb20','http://feed.feedsky.com/showeb20'],
+			['76','知乎','http://www.zhihu.com/rss','http://www.zhihu.com/rss']
 			
 	];
 	for ( var int = 0; int < data.length; int++) {
@@ -175,9 +182,10 @@ function createCollapseStyle(e, i) {
 }
 function parseRSS(url, callback) {
 	   $.ajax({
-	    url: 'http://ajax.googleapis.com/ajax/services/feed/load?q=' + encodeURIComponent(url) + '&v=1.0&num=50&callback=?',
+	    url: 'http://ajax.googleapis.com/ajax/services/feed/load?q=' + encodeURIComponent(url) + '&v=1.0&num=90&callback=?',
 	    dataType: 'json',
 	    success: function(data) {
+			debugger;
 	    	 	if(	$('#majorLayout')) {
 	    	 		$('#majorLayout').empty();
 	    	 	}

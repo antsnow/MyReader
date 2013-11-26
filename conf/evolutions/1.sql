@@ -1,0 +1,30 @@
+-- -- Table: subscriptions
+-- 
+-- -- DROP TABLE subscriptions;
+-- 
+-- CREATE TABLE subscriptions
+-- (
+--   id character varying(40) NOT NULL,
+--   active character(1),
+--   creation_date timestamp with time zone,
+--   modification_date timestamp with time zone,
+--   text character varying(255),
+--   title character varying(255),
+--   type character varying(255),
+--   xmlurl character varying(255),
+--   htmlurl character varying(255),
+--   CONSTRAINT subscriptions_pkey PRIMARY KEY (id )
+-- )
+-- WITH (
+--   OIDS=FALSE
+-- );
+-- ALTER TABLE subscriptions
+--   OWNER TO postgres;
+--   
+-- 
+--   CREATE SEQUENCE feed_seq
+--     INCREMENT 1
+--     MINVALUE 1
+--     MAXVALUE 9223372036854775807
+--     START 1
+--     CACHE 1;

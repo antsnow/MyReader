@@ -4,7 +4,7 @@
 		module="rss_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20131113205802"
+		publication="20131126203007"
 	>
 		<description>
 		RSS
@@ -39,5 +39,6 @@
 		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.2.1" conf="docs->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-jdbc_2.10" rev="2.2.1" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="anorm_2.10" rev="2.2.1" conf="compile->default(compile)"/>
+		<dependency org="postgresql" name="postgresql" rev="9.1-901.jdbc4" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
